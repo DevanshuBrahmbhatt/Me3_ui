@@ -27,7 +27,7 @@ const checkLabels = (...labelHashes) => labelHashes.map(hash => null)
 
 async function getEtherScanAddr() {
   const networkId = await getNetworkId()
-  switch (networkId) {
+  switch (3) {
     case 1:
     case '1':
       return 'https://etherscan.io/'

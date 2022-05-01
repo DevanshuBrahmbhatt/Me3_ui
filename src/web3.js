@@ -11,7 +11,7 @@ let address
 
 function getDefaultProvider() {
   legacyProvider = new Web3(getNetworkProviderUrl(1))
-  return new ethers.getDefaultProvider('homestead')
+  return new ethers.getDefaultProvider('ropsten')
 }
 
 function getJsonRpcProvider(providerOrUrl) {
@@ -25,8 +25,8 @@ function getWeb3Provider(providerOrUrl) {
 }
 
 function getInfuraProvider(infura) {
-  legacyProvider = new Web3(`https://mainnet.infura.io/v3/${infura}`)
-  return new ethers.providers.InfuraProvider('homestead', infura)
+  legacyProvider = new Web3(`https://ropsten.infura.io/v3/${infura}`)
+  return new ethers.providers.InfuraProvider('ropsten', infura)
 }
 
 export async function setupWeb3({
@@ -156,7 +156,7 @@ export function isReadOnly() {
 }
 
 export function getNetworkProviderUrl(id, apiKey) {
-  switch (id) {
+  switch ('3') {
     case '1':
       return `https://mainnet.infura.io/v3/${apiKey}`
     case '3':
@@ -166,7 +166,7 @@ export function getNetworkProviderUrl(id, apiKey) {
     case '5':
       return `https://goerli.infura.io/v3/${apiKey}`
     default:
-      return `https://mainnet.infura.io/v3/${apiKey}`
+      return `https://ropsten.infura.io/v3/${apiKey}`
   }
 }
 
@@ -233,14 +233,14 @@ export async function getAccounts() {
 export async function getNetworkId() {
   const provider = await getWeb3()
   const network = await provider.getNetwork()
-  return network.chainId
+  return 3
 }
 
 export async function getNetwork() {
   const provider = await getWeb3()
   const network = await provider.getNetwork()
   console.log('provider', provider, network);
-  return network
+  return 'ropsten'
 }
 
 export async function getBlock() {

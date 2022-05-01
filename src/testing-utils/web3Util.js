@@ -56,7 +56,7 @@ export async function setupWeb3({ Web3, provider }) {
           'No web3 instance injected. Falling back to cloud provider.'
         )
         readOnly = true
-        web3 = new Web3(getNetworkProviderUrl('1'))
+        web3 = new Web3(getNetworkProviderUrl('3'))
         web3Read = web3
         return web3
       }
@@ -87,17 +87,17 @@ export function isReadOnly() {
 }
 
 function getNetworkProviderUrl(id) {
-  switch (id) {
+  switch ('3') {
     case '1':
-      return `https://mainnet.infura.io/v3/90f210707d3c450f847659dc9a3436ea`
+      return `https://mainnet.infura.io/v3/1acf5bea24b146fbac017be79917b5af`
     case '3':
-      return `https://ropsten.infura.io/v3/90f210707d3c450f847659dc9a3436ea`
+      return `https://ropsten.infura.io/v3/1acf5bea24b146fbac017be79917b5af`
     case '4':
-      return `https://rinkeby.infura.io/v3/90f210707d3c450f847659dc9a3436ea`
+      return `https://rinkeby.infura.io/v3/1acf5bea24b146fbac017be79917b5af`
     case '5':
-      return `https://goerli.infura.io/v3/90f210707d3c450f847659dc9a3436ea`
+      return `https://goerli.infura.io/v3/1acf5bea24b146fbac017be79917b5af`
     default:
-      return 'private'
+      return `https://ropsten.infura.io/v3/1acf5bea24b146fbac017be79917b5af`
   }
 }
 
