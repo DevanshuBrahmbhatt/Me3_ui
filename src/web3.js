@@ -156,7 +156,7 @@ export function isReadOnly() {
 }
 
 export function getNetworkProviderUrl(id, apiKey) {
-  switch ('3') {
+  switch (id) {
     case '1':
       return `https://mainnet.infura.io/v3/${apiKey}`
     case '3':
@@ -233,14 +233,14 @@ export async function getAccounts() {
 export async function getNetworkId() {
   const provider = await getWeb3()
   const network = await provider.getNetwork()
-  return 3
+  return network.chainId;
 }
 
 export async function getNetwork() {
   const provider = await getWeb3()
   const network = await provider.getNetwork()
   console.log('provider', provider, network);
-  return 'ropsten'
+  return network
 }
 
 export async function getBlock() {

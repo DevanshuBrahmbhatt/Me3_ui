@@ -87,7 +87,7 @@ export function isReadOnly() {
 }
 
 function getNetworkProviderUrl(id) {
-  switch ('3') {
+  switch (id) {
     case '1':
       return `https://mainnet.infura.io/v3/1acf5bea24b146fbac017be79917b5af`
     case '3':
@@ -97,7 +97,7 @@ function getNetworkProviderUrl(id) {
     case '5':
       return `https://goerli.infura.io/v3/1acf5bea24b146fbac017be79917b5af`
     default:
-      return `https://ropsten.infura.io/v3/1acf5bea24b146fbac017be79917b5af`
+      return `https://mainnet.infura.io/v3/1acf5bea24b146fbac017be79917b5af`
   }
 }
 
