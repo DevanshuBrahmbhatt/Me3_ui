@@ -233,7 +233,7 @@ export async function getAccounts() {
 export async function getNetworkId() {
   const provider = await getWeb3()
   const network = await provider.getNetwork()
-  return network.chainId;
+  return network.chainId
 }
 
 export async function getNetwork() {
