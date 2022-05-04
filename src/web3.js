@@ -10,7 +10,7 @@ let requested = false
 let address
 
 function getDefaultProvider() {
-  legacyProvider = new Web3(getNetworkProviderUrl(1))
+  legacyProvider = new Web3(getNetworkProviderUrl(3))
   return new ethers.getDefaultProvider('ropsten')
 }
 
