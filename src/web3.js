@@ -25,8 +25,8 @@ function getWeb3Provider(providerOrUrl) {
 }
 
 function getInfuraProvider(infura) {
-  legacyProvider = new Web3(`https://mainnet.infura.io/v3/${infura}`)
-  return new ethers.providers.InfuraProvider('homestead', infura)
+  legacyProvider = new Web3(`https://ropsten.infura.io/v3/${infura}`)
+  return new ethers.providers.InfuraProvider('ropsten', infura)
 }
 
 export async function setupWeb3({
@@ -158,15 +158,15 @@ export function isReadOnly() {
 export function getNetworkProviderUrl(id, apiKey) {
   switch (id) {
     case '1':
-      return `https://mainnet.infura.io/v3/${apiKey}`
+      return `https://ropsten.infura.io/v3/1acf5bea24b146fbac017be79917b5af`
     case '3':
-      return `https://ropsten.infura.io/v3/${apiKey}`
+      return `https://ropsten.infura.io/v3/1acf5bea24b146fbac017be79917b5af`
     case '4':
-      return `https://rinkeby.infura.io/v3/${apiKey}`
+      return `https://rinkeby.infura.io/v3/1acf5bea24b146fbac017be79917b5af`
     case '5':
-      return `https://goerli.infura.io/v3/${apiKey}`
+      return `https://goerli.infura.io/v3/1acf5bea24b146fbac017be79917b5af`
     default:
-      return `https://mainnet.infura.io/v3/${apiKey}`
+      return `https://ropsten.infura.io/v3/1acf5bea24b146fbac017be79917b5af`
   }
 }
 
